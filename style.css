@@ -1,0 +1,426 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Barriecito&family=DM+Sans:opsz,wght@9..40,300&family=IBM+Plex+Sans&family=Poppins:wght@300&family=Roboto:wght@300;400&family=Sarabun:wght@300&family=Source+Code+Pro&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Barriecito&family=DM+Sans:opsz,wght@9..40,300&family=IBM+Plex+Sans&family=Montserrat:wght@300&family=Poppins:wght@300&family=Roboto:wght@300;400&family=Sarabun:wght@300&family=Source+Code+Pro&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Barriecito&family=DM+Sans:opsz,wght@9..40,300&family=IBM+Plex+Sans&family=Montserrat:wght@300&family=Poppins:wght@300&family=Roboto:wght@300;400&family=Sarabun:wght@300&family=Source+Code+Pro&family=Ubuntu:wght@300&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-container{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(8, 243, 243);
+    text-align: center;
+    background-color: rgb(99, 98, 98);
+    transition: width 0.8s ease;
+}
+
+.left-container::before{
+    content: '';
+    position: absolute;
+    background-image: url('todo.png');
+   
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.left-head h1{
+font-size: 3.5rem;
+margin: 15px;
+}
+.left-head p{
+font-weight: 600;
+font-size: 1rem;
+margin-bottom: 10px;
+}
+
+.left-btn{
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border: 1px solid rgb(28, 199, 199) ;
+    color: rgb(28, 199, 199);
+    cursor: pointer;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.left-btn:hover{
+background-color: rgb(99, 98, 98);
+border: none;
+}
+.right-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(99, 98, 98);
+    z-index: 100;
+    color: rgb(255, 255, 255);
+    transition: width 0.8s ease;
+    
+}
+.right-container::before{
+    content: '';
+    position: absolute;
+    background-image: url('note-taking.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.right-head h1{
+font-size: 3.5rem;
+margin: 15px;
+
+}
+.right-head p{
+font-weight: 600;
+font-size: 1rem;
+margin-bottom: 10px;
+}
+
+.right-btn{
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
+
+.right-btn:hover{
+    background-color: blueviolet;
+    color: #fff;
+    
+}
+
+.left-container:hover{
+    width: 85%;
+   
+}
+.right-container:hover{
+    width: 85%;
+}
+
+
+.hidden{
+    display: none;
+}
+/* Css for the very front page end here*/
+
+.todo-container{
+    display: flex;
+    position: relative;
+}
+
+.left-list{
+    position: relative;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+.fa-times{
+    font-size: 2rem;
+    position: absolute;
+    right: 10px;
+    margin: 5px;
+}
+
+.todo-profile{
+    display: flex;
+    margin: 3rem 0rem 2rem 2rem;
+}
+
+.fa-user{
+    position: absolute;
+    font-size: 1.5rem;
+    left: 15px;
+    margin: 0 5px;
+}
+
+.todo-profile h3{
+position: absolute;
+margin: 0 20px;
+}
+
+.todo-search{
+    width: 90%;
+    height: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    background-color: rgb(227, 231, 231);
+    margin: 30px 10px;
+    font-size: 1.2rem;
+}
+
+.todo-list li{
+list-style: none;
+margin: 20px;
+font-weight: 600;
+cursor: pointer;
+  display: flex;
+   align-items: center;
+   /* justify-content: center; */
+}
+
+.fa-sun , .fa-star , .fa-circle-check , .fa-list-check , .fa-infinity{
+    margin-right: 10px;
+}
+.li:hover{
+color: #16e4d9;
+}
+
+.right-list{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   z-index: 100;
+   overflow-y: hidden;
+   box-sizing: border-box;
+}
+
+.right-list::before{
+    content: '';
+    position: absolute;
+    background-image: url('todobg3.jpg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    opacity:0.6 ;
+    z-index: -10;
+}
+
+.todos{
+    /* margin-top: 130px; */
+    position: relative;
+    top: 130px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    /* scrollbar-width: 0px; */
+    box-sizing: border-box;
+}
+
+.todos::-webkit-scrollbar {
+  display: none;
+}
+
+
+.todo{
+    background-color: #fff;
+    color: rgb(15, 0, 0);
+    display: flex;
+    align-items: center;
+   margin: 10px 40px;
+   font-weight: 600;
+   border-radius: 5px;
+   box-sizing: border-box;
+   transition: all 0.5s ease;
+}
+
+.completedBox{
+    margin: 20px ;
+    font-size: 1.5rem;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+
+.time{
+    opacity: 0.5;
+    font-size: 0.8rem;
+}
+
+.fas.fa-star {
+    box-sizing: border-box;
+    position: sticky;
+    left: 93%;
+    font-size: 24px; 
+    cursor: pointer;
+}
+
+
+.fas.fa-star:hover {
+  color: gold; 
+}
+
+.maintodohead{
+   font-size: 4rem; 
+   color: #ffffff;
+   font-weight: 900;
+   font-family: 'Roboto';
+   left: 40px;
+   margin-top: 30px;
+   margin-bottom: 40px;
+   position: absolute;
+   letter-spacing: 1px;
+   top: 15px;
+}
+
+.todobtn{
+    position: absolute;
+        background-color: #333333;
+    color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+   margin-left: 35px;
+   font-weight: 600;
+   border-radius: 5px;
+   width: 93%;
+   height: 55px;
+   border: none;
+   bottom: 15px;
+   padding: 10px 20px;
+   font-size: 1.1rem;
+   cursor: pointer;
+}
+
+.todobtn:hover{
+    color: aqua;
+}
+
+.todobtn i{
+    margin-right: 10px;
+}
+
+/* modal window for the todos */
+.modal-window{
+    position: absolute;
+    background-color: rgb(58, 56, 56);
+    color: #fff;
+    top: 30%;
+    left: 40%;
+    z-index: 7500;
+    width: 35%;
+    height: 40%;
+    border-radius: 5px;
+    padding: 20px;
+    transition: all 0.5s ;
+}
+
+.modal-window h2{
+text-align: center;
+margin: 10px;
+font-size: 2rem;
+
+}
+
+.modaltodotext{
+    width: 100%;
+    height: 30px;
+    max-height: 100px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 1rem;
+}
+.modaltodotext:focus{
+    outline: none;
+}
+
+.modal-color{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.modal-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.modaltimeinput{
+    border: none;
+    background-color: transparent;
+}
+
+.modaltimeinput:focus{
+ 
+    outline: none;
+}
+
+.modal-submit{
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+     margin-top: 25px;
+    
+}
+
+
+.overlay{
+    background-color: rgb(83, 82, 82);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.6;
+    transition: all 0.5s;
+}
+.fa-times{
+    top: 5px;
+    cursor: pointer;
+
+}
+.fa-times:hover{
+    color: #b8bdbd;
+}
+
+.footer{
+    font-family: 'Poppins';
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 500;
+}

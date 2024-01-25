@@ -1,0 +1,57 @@
+.note-li:hover{
+color: rgb(240, 0, 0);
+}
+
+.active{
+    border-bottom: 2px solid rgb(235, 81, 81);
+    line-height: 35px;
+
+}
+
+.add-note:focus{
+color: rgb(240, 85, 85);
+}
+.add-note:hover{
+color: rgb(240, 85, 85);
+}
+
+.remove-note:focus{
+    color: rgb(240, 85, 85);
+    
+}
+.remove-note:hover{
+    
+    color: rgb(240, 85, 85);
+}
+
+.note-li2:hover{
+    
+    color: rgb(240, 85, 85);
+}
+.note-li2:focus{
+    
+    color: rgb(240, 85, 85);
+}
+
+.translated{
+transform: translateY(-300px);
+
+}
+
+.redded{
+    color: rgb(241, 105, 105);
+}
+
+.highlight {
+    background-color: rgb(223, 88, 64);
+    /* z-index: 1000; */
+}
+
+/* CSS for the tag-overlay */
+.tag-overlay {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    background-color: yellow; /* You can change the background color here */
+  }
+  

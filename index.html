@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="notesutil.css">
+
+    <!-- <script src="./highlight-within-textarea-master/jquery.highlight-within-textarea.js"></script> -->
+  
+    <title>Todos/Notes</title>
+</head>
+<body>
+    <div class="container ">
+        <div class="left-container">
+       <div class="left-head">
+        <h1>Get Things Done</h1>
+        <p>Stay Organized and Productive</p>
+        <button id="left-btn" class="left-btn" >Make Todo's List</button>
+       </div>
+        </div>
+        <div class="right-container">
+             <div class="right-head">
+        <h1>Capture, Organize, Inspire</h1>
+        <p>Elevate Your Thoughts with our Note-taking Platform</p>
+        <button id="right-btn" class="left-btn right-btn" >Make Notes List</button>
+       </div>
+        </div>
+    </div>
+    
+  <div class="todo-container  hidden ">
+    <div class="left-list ">
+        <div class="fas fa-times unique"></div>
+     <div class="todo-profile unique">
+        <i class="fas fa-user" ></i>
+        <h3>Sahil Khan</h3>
+     </div>
+     <div class="todo-profile skeleton one animated-bg animated-bg-text">
+        <h3></h3>
+     </div>
+     <input  class="todo-search unique " type="text" placeholder="Search">
+     <!-- <input  class="todo-search skeleton animated-bg animated-bg-text" type="text" placeholder="Search"> -->
+     <div class="todo-list">
+        <ul>
+          <li class="li all unique " > <i class="fa-solid fa-infinity"></i> All</li>
+          <li class="li all skeleton two animated-bg animated-bg-text " >  </li>
+            <li class="li unique" ><i class="fa-regular fa-sun"></i> My Day</li>
+            <li class="li skeleton three animated-bg animated-bg-text" > </li>
+            <li class="li important unique" > <i class="fa-regular fa-star"></i> Important</li>
+            <li class="li important four skeleton animated-bg animated-bg-text " > </i> </li>
+            <li class="li completed unique" > <i class="fa-regular fa-circle-check"></i> completed</li>
+            <li class="li completed five skeleton animated-bg animated-bg-text" >  </li>
+            <li class="li unique" > <i class="fa-solid fa-list-check"></i> Tasks</li>
+            <li class="li skeleton six animated-bg animated-bg-text" >  </li>
+        </ul>
+     </div>
+     <div class="footer unique">
+      &copy; All Rights Reserved by Sahil Khan 2023
+     </div>
+     <div class="footer skeleton seven animated-bg animated-bg-text">
+     </div>
+    </div>
+    <div class="right-list">
+  <h1 class="maintodohead unique" >Todos</h1>
+  <h1 class="maintodohead skeleton eight animated-bg animated-bg-text" ></h1>
+  <div class="todos">
+    <!-- <div class="todo">
+        <input type="checkbox" class="completedBox" id=""completed>
+        <div class="todo-info">
+            <p>we have to do something very important today </p>
+            <span class="time">Mon , Nov 15</span>
+        </div>
+           <i class="fas fa-star "></i>
+        </div>
+    <div class="todo">
+        <input type="checkbox" class="completedBox" id=""completed>
+        <div class="todo-info">
+            <p>we have to do something very important today </p>
+            <span class="time">Mon , Nov 15</span>
+        </div>
+          <i class="fas fa-star "></i> 
+   </div>
+       <div class="todo">
+        <input type="checkbox" class="completedBox" id=""completed>
+        <div class="todo-info">
+            <p>we have to do something very important today </p>
+            <span class="time">Mon , Nov 15</span>
+        </div>
+         <i class="fas fa-star"></i>
+        </div> -->
+  </div>
+  <button class="todobtn unique">
+    <i class="fa-solid fa-plus"></i>
+    <span>Add a Task</span>
+  </button>
+  <!-- <button class="todobtn skeleton nine animated-bg animated-bg-text"> -->
+    <!-- <i class="fa-solid fa-plus"></i> -->
+    <!-- <span></span> -->
+  <!-- </button> -->
+    </div>
+
+    <div class="maintodohead  eight skeleton animated-bg animated-bg-text"></div>
+    <div class="todobtn nine skeleton animated-bg animated-bg-text"></div>
+   <!-- <div class="modal-window">
+     <div class="fas fa-times"></div>
+    <h2>Write Todos</h2>
+    <input type="text" class="modaltodotext" id="modaltodotext">
+    <div class="modal-color">
+        <label for="modalcolorinput">Color</label>
+        <input type="color"  id="modalcolorinput">
+    </div>
+    <div class="modal-time">
+        <label for="modaltimeinput">Time</label>
+        <input type="date" id="modaltimeinput">
+    </div>
+    <button class="modal-submit" >Create</button>
+   </div>
+  <div class="overlay">
+</div> -->
+  
+  </div>
+
+<div class="note-container  hidden">
+  <div class="navbar">
+    <div class="navigatioin">
+      <ul class ="note-ul">
+        <li class = "note-li">
+          <img src="notepad.png" alt="" class="note-logo">
+        </li>
+        <li class = "note-li">
+         Working Set
+        </li>
+        <li class = "note-li  active">
+         All Notes
+        </li>
+        <li class = "note-li">
+          Help
+        </li>
+      </ul>
+    </div>
+      <div class="right-nav">
+
+  <button  class ="add-note  "  id="addNotes">
+    <i class="fa-regular fa-square-plus"></i> New Note
+  </button>
+  <input type="text" class="search-note" placeholder="  Search">
+     </div>
+  </div>
+<div class="rest-notes">
+  <div class="note-head">
+    <div class="left-li">
+      <ul class="note-ul2">
+        <li  class="note-li2 tags-opener ">
+          <i class="fa-solid fa-tag"></i> Tags
+        </li>
+        <li class="note-li2" >
+          <i class="fa-solid fa-qrcode"></i> Sets
+        </li>
+        <li class="note-li2" >
+          <i class="fa-solid fa-arrow-down-up-across-line"></i>  Recent First
+        </li>
+      </ul>
+    </div>
+    <div class="main-head">
+      <img src="notepad.png" class="main-logo">
+      All Notes
+    </div>
+    <div class="right-li">
+      <button class="remove-note" >
+        <i class="fa-solid fa-trash"></i>
+        Remove</button>
+      <li class="more" >
+        <i class="fa-solid fa-circle-info"></i>
+        More</li>
+    </div>
+  </div>
+
+<div class="tags-box  hidden">
+  <div class="tag-head">
+    <p class="head">Tags</p>
+    <input type="text" class="search-tag" placeholder="Add a new tag">
+    <i class="fa-solid fa-plus"></i>
+  </div>
+  <div class="tags-tag">
+  <div class="inner-tag">
+    <p>Adverbs</p>
+    <span>
+      <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+  </div>
+  <div class="inner-tag">
+    <p>Adverbs</p>
+    <span>
+      <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+  </div>
+  <div class="inner-tag">
+    <p>sahil</p>
+    <span>
+      <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+  </div>
+  </div>
+</div>
+
+  <div class="notes">
+    <!-- <div class="note">
+      <div class="inner-note">
+
+        <div class="pin">
+          <i class="fa-solid fa-thumbtack " ></i>
+        </div>
+        <div class="heading">
+          <p class="event-date">june 16 , 2023</p>
+          <input type="text" class="notes-head" placeholder="Heading for your note">
+        </div>
+        <div class="down-arrow">
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="note-delete hidden">
+          <button class="note-delete-button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="notes-text">
+       <textarea class="notes-textarea "></textarea>
+      </div>
+    </div>
+    <div class="note">
+      <div class="inner-note">
+
+        <div class="pin">
+          <i class="fa-solid fa-thumbtack" ></i>
+        </div>
+        <div class="heading">
+          <p class="event-date">june 16 , 2023</p>
+          <h2 class="notes-head" >you are not good</h2>
+        </div>
+        <div class="down-arrow">
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="notes-text">
+       <textarea class="notes-textarea"  ></textarea>
+      </div>
+    </div>
+    <div class="note">
+      <div class="inner-note">
+
+        <div class="pin">
+          <i class="fa-solid fa-thumbtack" ></i>
+        </div>
+        <div class="heading">
+          <p class="event-date">june 16 , 2023</p>
+          <h2 class="notes-head" >you are not good</h2>
+        </div>
+        <div class="down-arrow">
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="notes-text">
+       <textarea class="notes-textarea"  ></textarea>
+      </div>
+    </div> -->
+    
+  </div>
+</div>
+
+</div>
+  
+  <script src="script.js"></script>
+  <script src="notes.js"></script>
+   <script src="https://kit.fontawesome.com/9621910e2e.js" crossorigin="anonymous"></script>
+</body>
+</html>
